@@ -7,7 +7,8 @@
 PImage durianImg;
 
 void setup() {
-  fullScreen(); // you can use this instead of size
+  //fullScreen(); // you can use this instead of size
+  size(400, 300);
   // the image that I load with loadImage must be saved in the
   // 'data' folder, inside this sketche's folder
   durianImg = loadImage("durianFruit.jpeg");
@@ -15,6 +16,8 @@ void setup() {
 }
 
 void draw() {
+  // caveman debugging
+  //println("mouseX: " + mouseX + " ; mouseY: " + mouseY);
 }
 
 // what to do when the user drags the mouse
