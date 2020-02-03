@@ -10,6 +10,7 @@ void draw() {
   drawSnowman(100, 100);
   // with just one more line of code, I can draw an entire new snowman! Instead of writing all that code!
   drawSnowman(350, 100);
+  drawSnowman(600, 100);
 
   // homework
   //
@@ -28,6 +29,7 @@ void drawSnowman(int topLeftX, int topLeftY) {
   // head
   final int headRadius = 50; // note: everything in this function refers to this value, so I can use it
                              //       to scale the entire snowman...see homework 2.
+  // everything is drawn with respect to the top left corner of the head - this is my choice (it could be different)
   final int headCenterX = topLeftX + headRadius;
   final int headCenterY = topLeftY + headRadius;
   ellipse(headCenterX, headCenterY, 2*headRadius, 2*headRadius);
