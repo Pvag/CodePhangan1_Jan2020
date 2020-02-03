@@ -11,19 +11,18 @@ int speed;
 int squareSide;
 
 void setup() {
-  size(200, 100);
-  
+  size(170, 70);
+
   x = 20; // initialize the variable
-  speed = 20;
-  squareSide = 40;
-  
-  frameRate(4);
+  speed = 3;
+  squareSide = 20;
 }
 
 void draw() {
-  background(255, 0, 0);
+  makeTrail(true);
 
-  rect(x, 20, squareSide, squareSide);
+  fill(255, 0, 0);
+  rect(x, height/2-squareSide/2, squareSide, squareSide);
 
   // CONDITIONAL STATEMENT
   //
@@ -38,7 +37,7 @@ void draw() {
   if (rightEdgeReached() || leftEdgeReached()) {
     speed = - speed;
   }
-  
+
   // assignment
   x = x + speed; // update the value of x with new position
 }
@@ -57,4 +56,16 @@ boolean rightEdgeReached() {
 // This function returns true if the square has reached the left edge, false otherwise
 boolean leftEdgeReached() {
   return x <= 0;
+}
+
+// make a fading trail
+void makeTrail(boolean tf) {
+  if (tf) {
+    int fadeSpeed = 9;
+    fill(0, fadeSpeed); // second parameter is the opacity
+    rect(0, 0, width, height);
+  }
+  else {
+    background(0);
+  }
 }
