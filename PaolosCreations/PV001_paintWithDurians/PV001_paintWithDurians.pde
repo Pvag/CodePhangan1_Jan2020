@@ -8,7 +8,7 @@ PImage durianImg;
 
 void setup() {
   //fullScreen(); // you can use this instead of size
-  size(400, 300);
+  size(900, 700);
   // the image that I load with loadImage must be saved in the
   // 'data' folder, inside this sketche's folder
   durianImg = loadImage("durianFruit.jpeg");

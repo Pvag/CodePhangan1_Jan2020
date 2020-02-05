@@ -11,17 +11,20 @@ int speed;
 int squareSide;
 
 void setup() {
-  size(170, 70);
+  //size(170, 70);
+  fullScreen();
+  noCursor();
 
   x = 20; // initialize the variable
-  speed = 3;
-  squareSide = 20;
+  speed = 16;
+  squareSide = 55;
 }
 
 void draw() {
   makeTrail(true);
 
   fill(255, 0, 0);
+  noStroke();
   rect(x, height/2-squareSide/2, squareSide, squareSide);
 
   // CONDITIONAL STATEMENT
@@ -61,8 +64,9 @@ boolean leftEdgeReached() {
 // make a fading trail
 void makeTrail(boolean tf) {
   if (tf) {
-    int fadeSpeed = 9;
+    int fadeSpeed = 3;
     fill(0, fadeSpeed); // second parameter is the opacity
+    noStroke();
     rect(0, 0, width, height);
   }
   else {
