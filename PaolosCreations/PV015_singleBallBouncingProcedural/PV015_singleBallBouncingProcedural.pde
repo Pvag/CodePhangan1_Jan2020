@@ -1,3 +1,11 @@
+// PROCEDURAL version of the bouncing ball
+// (see PV018 for the object-oriented version that generates the same output)
+//
+// HW
+//
+// change the color of the ball at each bounce (easy)
+// change the background color every other bounce (intermediate)
+
 int x, y, ballRadius, xSpeed, ySpeed;
 
 void setup() {
@@ -15,7 +23,7 @@ void setup() {
 void draw() {
   refresh();
   moveBall();
-  drawBall();
+  renderBall();
 }
 
 void refresh() {
@@ -30,7 +38,7 @@ void moveBall() {
   y += ySpeed;
 }
 
-void drawBall() {
+void renderBall() {
   final color ballColor = color(200, 100, 0);
   pushStyle();
   noStroke();

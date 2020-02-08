@@ -9,7 +9,12 @@
 // NOTE
 // ----
 //
-// You will see how this code will be way easier to understand and write, in an Object Oriented fashion
+// You will see how this code will be way easier to understand and write,
+// in an Object Oriented fashion (see PV019)
+
+// PROCEDURAL version of the multiple bouncing balls
+// (see PV019 for the object-oriented version that generates the same output)
+
 
 int[] xs, ys;
 int ballRadius;
@@ -34,7 +39,7 @@ void setup() {
 void draw() {
   refresh();
   moveBalls();
-  drawBalls();
+  renderBalls();
 }
 
 // use this to set the initial position of the ball at (probably) different random values
@@ -61,15 +66,17 @@ void initSpeeds() {
   }
 }
 
+// move all the balls
 void moveBalls() {
   for (int i = 0; i < xs.length; i++) {
     moveBall(i);
   }
 }
 
-void drawBalls() {
+// render all the balls
+void renderBalls() {
   for (int i = 0; i < xs.length; i++) {
-    drawBall(i);
+    renderBall(i);
   }
 }
 
@@ -78,6 +85,7 @@ void refresh() {
   background(bkgColor);
 }
 
+// move a specific ball (the one that has index i)
 void moveBall(int i) {
   int x = xs[i];
   int y = ys[i];
@@ -91,7 +99,8 @@ void moveBall(int i) {
   ys[i] += ySpeeds[i]; //<>//
 }
 
-void drawBall(int i) {
+// render a specific ball (the one that has index i)
+void renderBall(int i) {
   int x = xs[i];
   int y = ys[i];
   final color ballColor = color(200, 100, 0);
