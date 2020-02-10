@@ -1,3 +1,7 @@
+// draws a line of circles
+//
+// the number of circles to be drawn is taken from the x coordinate of the mouse pointer
+
 void setup() {
   size(400, 200);
 }
@@ -5,7 +9,7 @@ void setup() {
 void draw(){
   //println("before the for loop");
   
-  int nOfCircles = int(map(mouseX, 0, width, 0, 9));
+  int nOfCircles = int(map(mouseX, 0, width-1, 0, 9));
   
   // we use for loops to repeat actions
   // for a specific number of times
