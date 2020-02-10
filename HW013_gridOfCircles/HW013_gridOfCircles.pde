@@ -16,3 +16,25 @@
 //  o o o o o o o o o o
 //  o o o o o o o o o o
 //  o o o o o o o o o o
+
+void setup() {
+  size(600, 400);
+}
+
+void draw() {  
+  gridOfCircles();
+}
+
+void gridOfCircles() {
+  for (int row = 1; row <= 6; row++) {
+    fill(0, 100, 40*row);
+    rowOfCircles(row*40);
+  }
+}
+
+void rowOfCircles(int y) {
+  final int nOfCircles = 10;
+  for (int i = 1; i <= nOfCircles; i++) {
+    ellipse(i*40, y, 30, 30);
+  }
+}
