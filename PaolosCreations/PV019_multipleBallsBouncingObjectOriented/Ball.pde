@@ -12,11 +12,14 @@ class Ball {
   }
   
   // was moveBall in the procedural version
-  void move() {
+  Ball move() {
     if (x >= width - ballRadius || x <= ballRadius) xSpeed = -xSpeed;
     if (y >= height - ballRadius || y <= ballRadius) ySpeed = -ySpeed;
     x += xSpeed;
     y += ySpeed;
+    
+    // return the address of the instance of class Ball on which the move() was called onto
+    return this;
   }
   
   // was renderBall in the procedural version

@@ -26,9 +26,11 @@ void draw() {
 
 void animateBalls() {
   for (int i = 0; i < myBalls.length; i++) {
-    Ball theBall = myBalls[i];
-    theBall.move();
-    theBall.render();
+    //Ball theBall = myBalls[i];
+    //theBall.move();
+    //theBall.render();
+    
+    myBalls[i].move().render(); // concatenate method calls
   }
 }
 

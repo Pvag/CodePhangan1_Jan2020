@@ -1,3 +1,4 @@
+// we define 3 objects of class Ball
 Ball bouncy;
 Ball biggie;
 Ball tiny;
@@ -5,7 +6,7 @@ Ball tiny;
 void setup() {
   size(400, 400);
   
-  // initialize the object
+  // initialize the object (don't forget this!)
   bouncy = new Ball(100, 100, 4, 7, 40);
   biggie = new Ball(200, 200, 10, 3, 80);
   tiny = new Ball(300, 200, -5, 4, 20);  
